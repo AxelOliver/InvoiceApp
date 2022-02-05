@@ -1,0 +1,45 @@
+﻿<Window x:Class="InvoiceAppNET5.MVVM.View.AddInvoicePopup"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InvoiceAppNET5.MVVM.View"
+        mc:Ignorable="d"
+        Title="AddInvoicePopup" Height="328" Width="356"
+        Background="WhiteSmoke">
+    <Grid>
+        <StackPanel Margin="0,0,20,0">
+            <Label x:Name="AddInvoiceLabel" Content="Create Invoice" HorizontalAlignment="Left" Margin="10,10,0,8" VerticalAlignment="Top" FontWeight="Bold"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,8">
+                <Label Content="Description" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                <TextBox x:Name="DescriptionTextBox" HorizontalAlignment="Right" Height="23" VerticalAlignment="Center" Width="209"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,8">
+                <Label Content="Cost Per Hour" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox x:Name="CostPerHourTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Center" Width="209"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,8">
+                <Label Content="Date" HorizontalAlignment="Left"  VerticalAlignment="Top"/>
+                <DatePicker x:Name="InvoiceDatePicker" 
+                    HorizontalAlignment="Left" 
+                    Height="23" VerticalAlignment="Center" Width="209"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,8">
+                <Label Content="Start Time" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox x:Name="StartTimeTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Center" Width="209"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,8">
+                <Label Content="End Time" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox x:Name="EndTimeTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Center" Width="209"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,8">
+                <TextBlock TextWrapping="WrapWithOverflow" Width="141" FontSize="12" Foreground="#FFC50000" >
+                    Note - Start and end time must be in 24h format (HH:mm)
+                </TextBlock>
+                <Button x:Name="ConfirmButton" Content="Confirm" HorizontalAlignment="Left" Margin="0,0,10,0" VerticalAlignment="Top" Width="75" IsDefault="True" Click="ConfirmButton_Click"/>
+                <Button x:Name="CancelButton" Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" IsCancel="True"/>
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Window>
